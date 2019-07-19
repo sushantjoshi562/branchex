@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	
+		<div class="jumbotron text-center"> <h1> Customer Invoice Management System</h1> </div>
+		<div class=" container">
+			
+			<table class="table table-bordered table-hover">
+				<thead>
+					<tr>
+						<th colspan="10" style="text-align: center ;">
+									<h3 class="text-center "> List of all Customers</h3>
+						</th>
+					</tr>
+				</thead>
+				
+				
+					<tr>
+								<th>Name </th>
+								<th> Address</th>
+								<th> Phone Number</th>
+								<th> Email</th>
+								<th> Company</th>
+								<th> Created By</th>
+								<th> Created On</th>
+								<th> Modified By</th>
+								<th> Modified On </th>
+								<th> Actions</th>
+					</tr>
+
+	
+					    				<tr id="id-${cus.id}" >
+					    					<td  >  ${cus.address}</td>
+					    					<td  >  ${cus.address}</td>
+					    					<td  > ${cus.phoneNumber}</td>
+					    					<td  >  ${cus.email}</td>
+					    					<td   > ${cus.company}</td>
+					    					<td   > ${cus.createdBy}</td>
+					    					<td   > ${cus.createdOn}</td>
+					    					<td   > ${cus.modifiedBy}</td>
+					    					<td   > ${cus.modifiedOn}</td>
+					    					<td > <button id="edit" onclick="edit()">Edit</button>
+					    						  <button id="delete-${cus.id}" onclick="deleteCustomer(${cus.id})"> Delete</button></td>
+					    				</tr>
+
+
+			</table>
+		</div>
+
+
+
+</body>
+</html>
